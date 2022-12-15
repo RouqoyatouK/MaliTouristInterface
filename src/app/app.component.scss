@@ -1,5 +1,5 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-item-background, var(--ion-background-color, #7E3300));
 }
 
 ion-menu.md ion-content {
@@ -7,6 +7,12 @@ ion-menu.md ion-content {
   --padding-end: 8px;
   --padding-top: 20px;
   --padding-bottom: 20px;
+}
+
+ion-menu.md[_ngcontent-xts-c142] ion-list#inbox-list[_ngcontent-xts-c142] {
+  //border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+  --background: var(--ion-item-background, var(--ion-background-color, #7E3300)) !important;
+
 }
 
 ion-menu.md ion-list {
@@ -20,10 +26,16 @@ ion-menu.md ion-note {
 ion-menu.md ion-list-header,
 ion-menu.md ion-note {
   padding-left: 10px;
+
 }
 
-ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+// ion-menu.md ion-list#inbox-list {
+//   border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+// }
+
+ion-list#inbox-list.md.list-list-md.hydrated{
+  --background: var(--ion-item-background, var(--ion-background-color, #7E3300)) !important;
+
 }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
@@ -38,7 +50,7 @@ ion-menu.md ion-list#labels-list ion-list-header {
 
   margin-bottom: 18px;
 
-  color: #757575;
+  color: red;
 
   min-height: 26px;
 }
@@ -58,7 +70,7 @@ ion-menu.md ion-item.selected ion-icon {
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: green;
 }
 
 ion-menu.md ion-item ion-label {
@@ -90,7 +102,7 @@ ion-menu.ios ion-item.selected ion-icon {
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #fff;
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {

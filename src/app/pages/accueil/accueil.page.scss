@@ -15,6 +15,9 @@
   height: 300px;
   padding: 0px;
   box-shadow: 1px 2px 3px gray;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 20px 100px 20px 100px;
 
   .carousel-inner {
       height: 300px;
@@ -29,5 +32,15 @@
   }
 }
 
+.rtgle{
+//   height: 60px;
+//   width: 110px;
+  border: 1px solid gray;
+  background-color: #D68711;
+  box-shadow: inset;
+  border-radius: 10px;
+  overflow: hidden;
+ //margin: 40px 40px 40px 40px;
+  //padding: 0px 20px 0px 20px;
 
-
+}
