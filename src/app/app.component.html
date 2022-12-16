@@ -1,5 +1,11 @@
+
+ <ion-router-outlet id="main-content"></ion-router-outlet>
 <ion-app>
-  <ion-split-pane contentId="main-content" >
+<ion-split-pane contentId="main-content" >
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+
+  <!-- <ion-split-pane contentId="main-content" >
     <ion-menu contentId="main-content" type="overlay"  style="width: 100px !important ; border-radius: 10px;">
       <ion-content>
         <ion-list id="inbox-list" style="background-color: #000 !important  ;">
@@ -12,7 +18,7 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
+        </ion-list> -->
 
         <!-- <ion-list id="labels-list">
           <ion-list-header>Labels</ion-list-header>
@@ -22,8 +28,9 @@
             <ion-label>{{ label }}</ion-label>
           </ion-item>
         </ion-list> -->
-      </ion-content>
+      <!-- </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  </ion-split-pane> -->
+</ion-split-pane>
 </ion-app>
