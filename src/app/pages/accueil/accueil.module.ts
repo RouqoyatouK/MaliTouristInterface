@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AccueilPageRoutingModule } from './accueil-routing.module';
 
 import { AccueilPage } from './accueil.page';
+import { SidemenuPage } from '../sidemenu/sidemenu.page';
 
 @NgModule({
   imports: [
@@ -16,5 +17,6 @@ import { AccueilPage } from './accueil.page';
     AccueilPageRoutingModule
   ],
   declarations: [AccueilPage]
+
 })
 export class AccueilPageModule {}
