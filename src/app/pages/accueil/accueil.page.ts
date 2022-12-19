@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccueilService } from 'src/app/Services/accueil.service';
 
 @Component({
   selector: 'app-accueil',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accueil.page.scss'],
 })
 export class AccueilPage implements OnInit {
+  afficherRegion:any;
 
-  constructor() { }
+  constructor(private accueilService: AccueilService) { }
 
   ngOnInit() {
+    this.accueilService.getRegion().subscribe(data=>{
+      this.afficherRegion= data;
+    })
   }
 
 }
