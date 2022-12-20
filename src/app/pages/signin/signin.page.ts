@@ -42,7 +42,7 @@ export class SigninPage implements OnInit {
         //this.reloadPage();
 
         if(this.isLoggedIn == true){
-          this.route.navigateByUrl("sidemenu/accueil")
+          this.route.navigateByUrl("/sidemenu/accueil")
         }
       },
       error: err => {

@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+// .modal-backdrop {
+//   --bs-backdrop-zindex: 0;
+//   --bs-backdrop-bg: #000;
+//   --bs-backdrop-opacity: 0.5;
+//   position: fixed;
+//   top: 0;
+//   left: 0; 
+//    z-index: 0 !important;
+//   width: 0 !important;
+//   height: 100vh;
+//   background-color: var(--bs-backdrop-bg);
+// }
+
+.modal-backdrop {
+  width: 0 !important;
+  height: 100vh;
+}

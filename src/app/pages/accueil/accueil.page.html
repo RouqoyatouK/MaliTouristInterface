@@ -15,50 +15,60 @@
   <div class="row">
 
     <div class="col col-lg-12 col-md-12 col-md-12 col-sd-12  ">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner ">
-          <div class="carousel-item active">
-            <img src="../../../assets/un.jpg" class="d-block w-100" alt="..." id="imgslide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner ">
+            <div class="carousel-item active">
+              <img src="../../../assets/un.jpg" class="d-block w-100" alt="..." id="imgslide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../../assets/deux.jpg" class="d-block w-100" alt="..." id="imgslide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../../assets/un.jpg" class="d-block w-100" alt="..." id="imgslide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="../../../assets/deux.jpg" class="d-block w-100" alt="..." id="imgslide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/un.jpg" class="d-block w-100" alt="..." id="imgslide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
       </div>
-</div>
+   </div>
 
-  <div class="row mx-auto">
-    <div class=" col-md-2 col-sm-2" >
+   <div class="col col-lg-4 col-md-4 col-md-4 col-sd-4 ">
+    <ul class="card-wrapper" *ngFor="let nomregion of afficherRegion">
 
-    </div>
+      <li class="card">
+        <img src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+        <p>{{nomregion.nom}}</p>
+        <h3><a href="">voir plus</a></h3>
+      </li>
+
+    </ul>
+   </div>
+
+  <!-- <div class="row mx-auto">
+    <div class=" col-md-2 col-sm-2" ></div>
         <div class="col-md-2 col-sm-2 rtgle" >
           <div class=" py-2 mb-5">
             1
@@ -76,22 +86,14 @@
         </div>
         <div class="col-md-2 col-sm-2 offset-md-2 " >
         </div>
-      </div>
-  </div>
-
-  <div class="row">
-
-    <ul class="card-wrapper">
-
-      <li class="card">
-        <img src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
-        <p>{{afficherRegion.nom}}</p>
-        <h3><a href="">voir plus</a></h3>
-      </li>
-
-    </ul>
+    </div> -->
 
   </div>
+
+
+
+
+
 
 
 

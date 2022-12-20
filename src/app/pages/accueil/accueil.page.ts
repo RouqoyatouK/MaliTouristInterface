@@ -12,8 +12,11 @@ export class AccueilPage implements OnInit {
   constructor(private accueilService: AccueilService) { }
 
   ngOnInit() {
+    console.log("-------------")
     this.accueilService.getRegion().subscribe(data=>{
       this.afficherRegion= data;
+      console.log("---------------------------");
+      console.log(data)
     })
   }
 

@@ -10,7 +10,7 @@ const routes: Routes = [
     children:[
       {
         path: '',
-        redirectTo: 'signup',
+        redirectTo: '',
         pathMatch: 'full'
       },
       {
@@ -39,7 +39,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'signin',
+        redirectTo: '',
         pathMatch: 'full'
       },
     ]
