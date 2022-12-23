@@ -10,13 +10,13 @@
 <ion-content>
   <div class="row " style="margin-top: 20px ;">
     <div class="row detailregion" >
-    <div class="col col-lg-6"> <img style="width: 100%;" src="../../../assets/un.jpg" alt=""></div>
+    <div class="col col-lg-6" > <img  style="width: 100%;" [src]='image' alt=""></div>
 
     <div class="col col-lg-6">
 
       <div class="row" style="color: #fff; text-align: center;">
-        <h1 style="margin-bottom: 70px;">KAye</h1>
-        <p>jr kdkdkllllllllllllllllllllllllllllllllllllll</p>
+        <h1 style="margin-bottom: 70px;" >{{nom}}</h1>
+        <p >{{superfie}}</p>
         <p style="margin-top: 50px;">Pour les iconne sup et modifier</p>
       </div>
     </div>
@@ -33,10 +33,10 @@
           <div class="form-group">
             <!-- <label for="exampleInputEmail1" id="LNUC">Laisser nous un commentaire</label><br> -->
             <h3 id="LNUC">Laisser nous un commentaire</h3>
-            <input type="text"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Commentaire.."> <br>
+            <input type="text"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Commentaire.." name="message" [(ngModel)]="message"> <br>
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" (click)="AjouterLeComment()">Submit</button>
         </form>
       </div>
 

@@ -6,18 +6,17 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class RegionService {
-  env= environment
+export class CommentaireService {
+  env=environment
 
   constructor(private http: HttpClient) { }
-  AjouterRegion(habitants: String, nomrg:any):Observable<any>{
+  AjouterCommentaire(message:any, idnomregion: any): Observable<any>{
 
-    //    const data: FormData = new FormData();
-    const region = {
-      "habitants": habitants,
+    const commentaire ={
+      "message": message,
     }
 
-    return this.http.post(`${this.env.api}/region/add/${nomrg}`, region)
+    return this.http.post(`${this.env.api}/commentaire/add/${idnomregion}`, commentaire);
+
   }
 }
-

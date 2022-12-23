@@ -11,7 +11,7 @@
   <div class=" buttonpan mx-auto d-block mt-5">
   <div class="row" style="margin-top: 20px;">
     <!--premier button pays-->
-  <div class="col col-lg-4 col-md-4 col-md-4 col-sd-4 ">
+  <div class="col col-lg-6 col-md-6 col-md-6 col-sd-6 ">
     <div>
         <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -47,11 +47,11 @@
 
 
     <!--boutton deux Nom region-->
-    <div class="col col-lg-4 col-md-4 col-md-4 col-sd-4 ">
+  <div class="col col-lg-6 col-md-6 col-md-6 col-sd-6 ">
       <div>
-      <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-Ajouter NomRegion</button> -->
+          <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Ajouter NomRegion</button> -->
 
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
@@ -63,7 +63,10 @@ Ajouter NomRegion</button> -->
       <div class="modal-body">
 <form >
 
-
+  <div class="form-group">
+    <label for="imageregion">Image Region</label>
+    <input type="file" class="form-control" id="" placeholder="imageregion" (change)="Recupererlimage($event)" multiple required>
+  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nom region</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nom" [(ngModel)]="nom">
@@ -92,7 +95,7 @@ Ajouter NomRegion</button> -->
       <option  *ngFor="let plist of paysliste" value="{{plist.nompays}}">{{plist.nompays}}</option>
     </select>
   </div>
-  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" (click)="AjouterLeNomRegion()">Ajouter Region</button>
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" (click)="AjouterLeNomRegion()">ENvoyer</button>
 </form>
 </div>
       <div class="modal-footer">
@@ -117,7 +120,7 @@ Ajouter NomRegion</button> -->
     </div>
   </div>
 </div> -->
-<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+<a class="btn btn-primary " data-bs-toggle="modal" href="#exampleModalToggle" role="button">Ajouter NomRegion</a>
 
 <!-- Modal -->
 <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -144,14 +147,14 @@ Ajouter NomRegion</button> -->
 </div>
 </div>
     <!--button trois date-->
-  <div class="col col-lg-4 col-md-4 col-md-4 col-sd-4 ">
-    <div>
+  <!-- <div class="col col-lg-4 col-md-4 col-md-4 col-sd-4 ">
+    <div> -->
 
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Ajout Annee</button>
 
-<!-- Modal -->
+ Modal
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -168,13 +171,13 @@ Ajout Annee</button>
         </form>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-</div>
-    </div>
-  </div>
+</div> -->
+    <!-- </div>
+  </div> -->
   </div>
 
   <!--row-->
@@ -192,29 +195,17 @@ Ajout Annee</button>
         <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">Habitants</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="habitants" [(ngModel)]="habitants">
           </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Annees</label>
-            <select class="form-control" id="exampleFormControlSelect1 ">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
+
           <div class="form-group">
             <label for="exampleFormControlSelect1">Region</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <select class="form-control" id="exampleFormControlSelect1" name="nomrg" [(ngModel)]="nomrg">
+              <option *ngFor="let affr of afficherRegion" value="{{affr.nom}}">{{affr.nom}}</option>
+
             </select>
           </div><br>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" (click)="AjouterDeRegion()">Envoyer</button>
         </form>
       </div>
     </div>

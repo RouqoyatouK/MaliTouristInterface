@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder/',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
@@ -23,10 +23,10 @@ const routes: Routes = [
     path: 'regions',
     loadChildren: () => import('./pages/regions/regions.module').then( m => m.RegionsPageModule)
   },
-  {
-    path: 'commentaire',
-    loadChildren: () => import('./pages/commentaire/commentaire.module').then( m => m.CommentairePageModule)
-  },
+  // {
+  //   path: 'sidemenu/commentaire/:idnomregion',
+  //   loadChildren: () => import('./pages/commentaire/commentaire.module').then( m => m.CommentairePageModule)
+  // },
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)

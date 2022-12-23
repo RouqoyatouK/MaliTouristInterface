@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NomregionService {
  env= environment
+ 
   constructor(private http: HttpClient) { }
 
 
@@ -16,17 +17,20 @@ export class NomregionService {
   private String superfie;
   private String coderegion;
   private String activite;*/
-  AjouterNomRegion(nom: String,superfie: String, coderegion: String, activite: String, pays: any ): Observable<any>{
+  AjouterNomRegion(nom: String,superfie: String, coderegion: String, activite: String, pays: any, file: File ): Observable<any>{
     const data: FormData = new FormData();
 
-    const nomregion = {
+    const nomregion = [{
       "nom": nom,
       "superfie": superfie,
       "coderegion": coderegion,
-      "activite": activite
+      "activite": activite,
+      //"imgregion": "",
 
-    }
-    return this.http.post(`${this.env.api}/nomregion/add/${pays}`, nomregion)
-    
+    }]
+    data.append('file', file)
+    data.append('nomregion', JSON.stringify(nomregion).slice(1, JSON.stringify(nomregion).lastIndexOf(']')))
+    return this.http.post(`${this.env.api}/nomregion/add/${pays}`, data);
+
   }
 }

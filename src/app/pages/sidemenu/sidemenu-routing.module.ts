@@ -26,7 +26,7 @@ const routes: Routes = [
         loadChildren: () => import('../regions/regions.module').then( m => m.RegionsPageModule)
       },
       {
-        path: 'commentaire',
+        path: 'commentaire/:idnomregion',
         loadChildren: () => import('../commentaire/commentaire.module').then( m => m.CommentairePageModule)
       },
       {

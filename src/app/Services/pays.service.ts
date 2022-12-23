@@ -18,6 +18,7 @@ export class PaysService {
 
     const data: FormData = new FormData();
     console.log(nompays);
+    
    const pays = {
      "nompays": nompays,
      "superficie": superficie,
